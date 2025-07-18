@@ -3,10 +3,7 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": ".next"
-      }
+      "use": "@vercel/next"
     }
   ],
   "routes": [
@@ -14,12 +11,5 @@
       "src": "/(.*)",
       "dest": "/$1"
     }
-  ],
-  "env": {
-    "PAYLOAD_SECRET": "a1b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef123456",
-    "PAYLOAD_PUBLIC_SITE_URL": "https://holidaydeals.vercel.app",
-    "PAYLOAD_PUBLIC_CDN_URL": "https://holidaydeals.vercel.app/api/payload/cdn",
-    "CRON_SECRET": "b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef123456a1",
-    "PREVIEW_SECRET": "c3d4e5f6789012345678901234567890abcdef1234567890abcdef123456a1b2"
-  }
+  ]
 }

@@ -10,6 +10,9 @@ const nextConfig = {
     payload: {
       enabled: true,
       serverURL: process.env.PAYLOAD_PUBLIC_SITE_URL,
+      admin: {
+        path: '/admin',
+      },
     },
   },
 }

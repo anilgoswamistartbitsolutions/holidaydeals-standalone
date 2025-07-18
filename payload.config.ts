@@ -1,8 +1,12 @@
 import { buildConfig } from 'payload';
 import path from 'path';
 import { defineConfig } from 'payload';
+import { Payload } from 'payload';
 
 export default defineConfig({
+  typescript: {
+    outputFile: path.resolve(__dirname, 'payload-types.ts'),
+  },
   serverURL: process.env.PAYLOAD_PUBLIC_SITE_URL,
   admin: {
     user: 'users',
@@ -13,6 +17,29 @@ export default defineConfig({
     path: '/admin',
   },
   collections: [
+    {
+      slug: 'users',
+      auth: true,
+      admin: {
+        group: 'Authentication',
+      },
+      access: {
+        read: () => true,
+      },
+      fields: [
+        {
+          name: 'email',
+          type: 'email',
+          required: true,
+          unique: true,
+        },
+        {
+          name: 'name',
+          type: 'text',
+          required: true,
+        },
+      ],
+    },
     {
       slug: 'tours',
       access: {

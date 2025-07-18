@@ -10,9 +10,9 @@
     "postinstall": "payload generate-types"
   },
   "dependencies": {
-    "@payloadcms/next-payload": "^0.4.0",
-    "@payloadcms/next-payload-admin": "^0.4.0",
-    "payload": "^2.0.0",
+    "@payloadcms/next-payload": "^0.1.11",
+    "@payloadcms/next-payload-admin": "^0.1.11",
+    "payload": "^1.8.0",
     "dotenv": "^16.3.1",
     "@iconify/icons-ion": "^1.2.10",
     "@iconify/react": "^5.0.1",
